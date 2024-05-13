@@ -1,0 +1,8 @@
+<!-- src/app/search/search.component.html -->
+<div class="search-container">
+    <input [(ngModel)]="username" type="text" placeholder="Enter GitHub username" class="input" />
+    <button (click)="onSearch()" class="btn">Search</button>
+  </div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+  <app-repository-list [repositories]="repositories"></app-repository-list>
+  
